@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercícios com Javascript</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Exercícios com Javascript</h1>
+    </header>
+
+    <aside>
+      <div class="cep"><a href="">Buscar CEP</a></div>
+      <div class="fatorial"><a href="">Fatorial</a></div>
+      <div class="fibonacci_normal"><a href="">Fibonacci</a></div>
+      <div class="fibonacci_pares"><a href="">Fibonacci Pares</a></div>
+      <div class="inversao_de_string"><a href="">Inversão de String</a></div>
+      <div class="palindromo"><a href="">Palíndromo</a></div>
+      <div class="vogais"><a href="">Vogais</a></div>
+    </aside>
+
+    <section>
+      <div class="exercicios ativo">
+        <h2>Para iniciarmos, selecione uma das opções ao lado.</h2>
+      </div>
+
+      <div id="cep" class="exercicios">
+        <h1>Consulte dados do CEP informado:</h1>
+        <br />
+        <p>
+          <b>Nota:</b> O resultado exibirá apenas Rua, CEP, Bairro, Cidade e UF
+          do endereço.
+        </p>
+        <br />
+        <input
+          id="cepDeEntrada"
+          type="text"
+          name="entrada"
+          value=""
+          placeholder=" Digite um CEP"
+        />
+        <input type="button" id="btn" value="Consultar" onclick="consultar()" />
+        <h3>Resultado:</h3>
+        <div id="resultCep" class="result"></div>
+      </div>
+
+      <div id="fatorial" class="exercicios">
+        <h1>Digite um numero para calcular seu fatorial:</h1>
+        <br />
+        <input type="number" name="number" value="" placeholder=" Número" />
+        <input type="button" value="Calcular" onclick="fatorial()" id="btn" />
+        <h3>Resultado:</h3>
+        <div id="fatoriais" class="result"></div>
+      </div>
+
+      <div id="fibonacci_normal" class="exercicios">
+        <h1>Digite a quantidade de termos à serem exibidos:</h1>
+        <br />
+        <input type="number" id="qtdTermos" placeholder=" Número de Termos" />
+        <input type="button" value="Exibir" onclick="fibonacci()" id="btn" />
+        <h3>Resultado:</h3>
+        <div id="termos" class="result"></div>
+      </div>
+
+      <div id="fibonacci_pares" class="exercicios">
+        <h1>Digite a quantidade de termos à serem exibidos:</h1>
+        <br />
+        <p><b>Observação:</b>O resultado exibirá apenas os termos pares.</p>
+        <br />
+        <input
+          type="number"
+          id="qtdTermosPares"
+          placeholder=" Número de Termos"
+        />
+        <input
+          type="button"
+          value="Exibir"
+          onclick="fibonacciPares()"
+          id="btn"
+        />
+        <h3>Resultado:</h3>
+        <div id="termosPares" class="result"></div>
+      </div>
+
+      <div id="inversao_de_string" class="exercicios">
+        <h1>Digite qualquer palavra ou frase para invertermos:</h1>
+        <br />
+        <input
+          type="text"
+          name="string"
+          value=""
+          placeholder="Digite uma palavra ou frase"
+        />
+        <input type="button" id="btn" value="executar" onclick="inverter()" />
+        <h3>Resultado:</h3>
+        <div id="inverted" class="result"></div>
+      </div>
+
+      <div id="palindromo" class="exercicios">
+        <h1>Verificação de Palíndromos</h1>
+        <br />
+        <p>
+          <b>Nota:</b> É possível consultar apenas uma frase ou palavra por vez.
+        </p>
+        <br />
+        <input
+          type="text"
+          name="palavras"
+          value=""
+          placeholder="Digite uma palavra ou frase"
+        />
+        <input
+          type="button"
+          id="btn"
+          value="verificar"
+          onclick="palindromo()"
+        />
+        <h3>Resultado:</h3>
+        <div id="palindromos" class="result"></div>
+      </div>
+
+      <div id="vogais" class="exercicios">
+        <h1>Palavras iniciadas com vogais</h1>
+        <br />
+        <p>
+          Digite qualquer palavra ou frase e mostraremos se iniciam ou não com
+          vogais.
+        </p>
+        <br />
+        <input
+          type="text"
+          name="words"
+          value=""
+          placeholder="Digite uma palavra ou frase"
+        />
+        <input type="button" id="btn" value="verificar" onclick="vogais()" />
+        <h3>Resultado:</h3>
+        <div id="palavrasVogais" class="result"></div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Praticando Javascript - 2021</p>
+    </footer>
+
+    <script src="/scripts/activeSections.js"></script>
+    <script src="/scripts/fatorial.js"></script>
+    <script src="/scripts/fibonacci_normal.js"></script>
+    <script src="/scripts/fibonacci_pares.js"></script>
+    <script src="/scripts/inversão_de_string.js"></script>
+    <script src="/scripts/palindromo.js"></script>
+    <script src="/scripts/vogais.js"></script>
+    <script src="/scripts/cep.js"></script>
+  </body>
+</html>
